@@ -1,0 +1,15 @@
+<resources>
+    <string deviceName="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string deviceName="prompt_email">Email</string>
+    <string deviceName="prompt_password">Password (optional)</string>
+    <string deviceName="action_sign_in">Sign in or register</string>
+    <string deviceName="action_sign_in_short">Sign in</string>
+    <string deviceName="plus_sign_out">Switch Google+ account</string>
+    <string deviceName="plus_disconnect">Disconnect from Google+</string>
+    <string deviceName="error_invalid_email">This email address is invalid</string>
+    <string deviceName="error_invalid_password">This password is too short</string>
+    <string deviceName="error_incorrect_password">This password is incorrect</string>
+    <string deviceName="error_field_required">This field is required</string>
+</resources>

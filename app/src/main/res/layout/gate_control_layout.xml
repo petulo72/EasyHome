@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/gateButtonOpen"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@drawable/arrow_left" />
+
+    <Button
+        android:id="@+id/gateButtonClose"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@drawable/arrow_right" />
+
+</LinearLayout>
