@@ -124,7 +124,7 @@ public class Db {
             profiles.put("value21", device.getValues()[21]);
             profiles.put("value22", device.getValues()[22]);
             profiles.put("value23", device.getValues()[23]);
-        } else if (device.getDeviceType().getName() == "RGBlight") {
+        } else if (device.getDeviceType().getName().equals("RGBlight")) {
             profiles.put("value0", device.getValues()[0]);
             profiles.put("value1", device.getValues()[1]);
             profiles.put("value2", device.getValues()[2]);
@@ -143,39 +143,39 @@ public class Db {
 
  /*------------------------------ UPDATE ------------------------------*/
 
-//	public void updateDeviceValue(Device device) {
-//		open();
-//
-//		ContentValues devices = new ContentValues();
+	public void updateDeviceValue(Device device) {
+		open();
+
+		ContentValues devices = new ContentValues();
 //        if(device.getDeviceType().getDeviceId() == 5){
 //            devices.put(SQLHelper.COLUMN_VALUE, device.getValue()*100);
 //        }else {
 //            devices.put(SQLHelper.COLUMN_VALUE, device.getValue());
 //        }
-//
-//        sqLiteDatabase.update(
-//                SQLHelper.TABLE_DEVICE,
-//                devices,
-//                SQLHelper.COLUMN_ID + " = ?",
-//                new String[]{"" + device.getDeviceId()});
-//        Log.w("device value: ", String.valueOf(device.getValue()));
-//		close();
-//	}
+
+        sqLiteDatabase.update(
+                SQLHelper.TABLE_DEVICE,
+                devices,
+                SQLHelper.COLUMN_ID + " = ?",
+                new String[]{"" + device.getDeviceId()});
+        Log.w("device value: ", String.valueOf(device.getValue()));
+		close();
+	}
 
 //	public void selectDevice(int house, int room, int type, int device, int value) {
 //		String inner =
-//				"SELECT " + SQLHelper.COLUMN_ID + 
+//				"SELECT " + SQLHelper.COLUMN_ID +
 //				" FROM " + SQLHelper.TABLE_ROOM +
-//				" WHERE " + SQLHelper.COLUMN_HOUSE_ID + " = " + house + 
+//				" WHERE " + SQLHelper.COLUMN_HOUSE_ID + " = " + house +
 //				" AND " + SQLHelper.COLUMN_ROOM_NUMBER + " = " + room;
 //
-//		String update = 
+//		String update =
 //				"UPDATE" + SQLHelper.TABLE_DEVICE +
 //				" SET " + SQLHelper.COLUMN_VALUE + " = " + value +
 //				" WHERE " + SQLHelper.COLUMN_DEVICE_NUMBER + " = " + device +
 //				" AND " + SQLHelper.COLUMN_TYPE + " = " + type +
 //				" AND " + SQLHelper.COLUMN_ROOM_ID + " IN (" + inner + ");";
-//		
+//
 //		sqLiteDatabase.execSQL(update);
 //	}
 
